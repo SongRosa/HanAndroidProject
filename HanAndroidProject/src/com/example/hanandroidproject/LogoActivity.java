@@ -25,7 +25,14 @@ public class LogoActivity extends Activity{
 			it.putExtra("auto", 1);
 			startActivity(it);
 			finish();
+			
+			overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
 		}
 	};
 
+	@Override
+	public void onBackPressed(){
+		super.onBackPressed();
+		handler.removeCallbacks(irun);
+	}
 }
