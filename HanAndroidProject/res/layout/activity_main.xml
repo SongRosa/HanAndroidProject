@@ -1,16 +1,334 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.hanandroidproject.MainActivity" >
+    android:background="#ffffffff"
+    android:orientation="vertical" >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#10253f"
+        android:paddingLeft="10dp" >
+
+        <ImageButton
+            android:id="@+id/main_openMenu_Btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center_vertical|end"
+            android:background="@drawable/menu" />
+
+        <ImageButton
+            android:id="@+id/main_logo_iBtn"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/whitelogo"
+            android:gravity="center_vertical" />
+
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/main_weatherPager"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="62dp"
+        android:background="#ffffffff" >
+    </android.support.v4.view.ViewPager>
+
+    <com.slidinglayer.SlidingLayer
+        xmlns:app="http://schemas.android.com/apk/res/com.example.hanandroidproject"
+        android:id="@+id/main_slide_menu"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:weightSum="10"
+        app:closeOnTapEnabled="false"
+        app:offsetWidth="0dp"
+        app:shadowDrawable="false"
+        app:shadowWidth="0dp"
+        app:stickTo="right" >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#10253f"
+                android:orientation="vertical"
+                android:weightSum="1" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:background="#10253f"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp" >
+
+                    <TextView
+                        android:id="@+id/main_loginCheck_tv"
+                        android:layout_width="165dp"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:textColor="#ffffff"
+                        android:textSize="18dp" />
+
+                    <Button
+                        android:id="@+id/main_closeMenu_Btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_margin="1dp"
+                        android:background="@drawable/x_button"
+                        android:gravity="center" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:background="#10253f"
+                    android:orientation="vertical"
+                    android:paddingBottom="5dp" >
+
+                    <Button
+                        android:id="@+id/main_signInOrMyPage_Btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/button_style"
+                        android:gravity="center_vertical|left"
+                        android:textColor="#ffffff" />
+
+                    <Button
+                        android:id="@+id/main_logout_Btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/button_style"
+                        android:gravity="center_vertical|left"
+                        android:textColor="#ffffff" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:background="#10253f"
+                    android:orientation="vertical"
+                    android:paddingBottom="5dp" >
+
+                    <Button
+                        android:id="@+id/main_menu_goParkNum1_Btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/slide_gangseo_style"
+                        android:gravity="left" />
+
+                    <Button
+                        android:id="@+id/main_menu_goParkNum2_Btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/slide_kwangnaru_style"
+                        android:gravity="left" />
+
+                    <Button
+                        android:id="@+id/main_menu_goParkNum3_Btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="left"
+                        android:background="@drawable/slide_nanji_style" />
+
+                    <Button
+                        android:id="@+id/main_menu_goParkNum4_Btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/slide_ttukseom_style"
+                        android:gravity="left" />
+
+                    <Button
+                        android:id="@+id/main_menu_goParkNum5_Btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/slide_mangwon_style"
+                        android:gravity="left" />
+
+                    <Button
+                        android:id="@+id/main_menu_goParkNum6_Btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/slide_banpo_style"
+                        android:gravity="left" />
+
+                    <Button
+                        android:id="@+id/main_menu_goParkNum7_Btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/slide_yanghwa_style"
+                        android:gravity="left" />
+
+                    <Button
+                        android:id="@+id/main_menu_goParkNum8_Btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/slide_yeouido_style"
+                        android:gravity="left" />
+
+                    <Button
+                        android:id="@+id/main_menu_goParkNum9_Btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/slide_ichon_style"
+                        android:gravity="left" />
+
+                    <Button
+                        android:id="@+id/main_menu_goParkNum10_Btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/slide_jamsil_style"
+                        android:gravity="left" />
+
+                    <Button
+                        android:id="@+id/main_menu_goParkNum11_Btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/slide_jamwon_style"
+                        android:gravity="left" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </com.slidinglayer.SlidingLayer>
+
+    
+
+        <TableLayout
+            android:id="@+id/main_tableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:layout_below="@+id/main_weatherPager"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="50dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:paddingBottom="10dp" >
+
+                <ImageButton
+                    android:id="@+id/main_goParkNum1_iBtn"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginRight="10dp" />
+
+                <ImageButton
+                    android:id="@+id/main_goParkNum2_iBtn"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginRight="10dp" />
+
+                <ImageButton
+                    android:id="@+id/main_goParkNum3_iBtn"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginRight="10dp" />
+
+                <ImageButton
+                    android:id="@+id/main_goParkNum4_iBtn"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginRight="10dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+               android:layout_gravity="center_horizontal"
+                android:paddingBottom="10dp" >
+
+                <ImageButton
+                    android:id="@+id/main_goParkNum5_iBtn"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginRight="10dp" />
+
+                <ImageButton
+                    android:id="@+id/main_goParkNum6_iBtn"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginRight="10dp" />
+
+                <ImageButton
+                    android:id="@+id/main_goParkNum7_iBtn"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginRight="10dp" />
+
+                <ImageButton
+                    android:id="@+id/main_goParkNum8_iBtn"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginRight="10dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:paddingBottom="10dp" >
+
+                <ImageButton
+                    android:id="@+id/main_goParkNum9_iBtn"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginRight="10dp" />
+
+                <ImageButton
+                    android:id="@+id/main_goParkNum10_iBtn"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginRight="10dp" />
+
+                <ImageButton
+                    android:id="@+id/main_goParkNum11_iBtn"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginRight="10dp" />
+
+                <ImageButton
+                    android:id="@+id/main_goBoard_iBtn"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginRight="10dp" />
+            </TableRow>
+        </TableLayout>
+
+
+    <LinearLayout
+        android:id="@+id/main_notice_layOut"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/main_notice_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="공지사항"
+            android:textSize="10dp" />
+
+        <ListView
+            android:id="@+id/main_notice_List"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
 
 </RelativeLayout>
