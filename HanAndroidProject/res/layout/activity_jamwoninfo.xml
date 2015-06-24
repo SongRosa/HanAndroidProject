@@ -8,10 +8,12 @@
 
     <TextView
         android:id="@+id/head"
-        android:layout_width="100dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="공원 안내지도" 
-        android:paddingTop="20dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:paddingTop="40dp"
         />
     
 <LinearLayout    
