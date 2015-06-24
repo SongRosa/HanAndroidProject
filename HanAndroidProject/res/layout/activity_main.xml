@@ -14,13 +14,11 @@
 
         <ImageButton
             android:id="@+id/main_openMenu_Btn"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"
-            android:gravity="center_vertical|end"
-            android:background="@drawable/menu" />
+            android:layout_centerVertical="true"
+             />
 
         <ImageButton
             android:id="@+id/main_logo_iBtn"
@@ -106,15 +104,15 @@
                         android:id="@+id/main_signInOrMyPage_Btn"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
-                        android:background="@drawable/button_style"
+                        android:background="@drawable/menu_button_style"
                         android:gravity="center_vertical|left"
                         android:textColor="#ffffff" />
 
                     <Button
-                        android:id="@+id/main_logout_Btn"
+                        android:id="@+id/main_logInOrlogOut_Btn"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
-                        android:background="@drawable/button_style"
+                        android:background="@drawable/menu_button_style"
                         android:gravity="center_vertical|left"
                         android:textColor="#ffffff" />
                 </LinearLayout>
@@ -131,78 +129,67 @@
                         android:id="@+id/main_menu_goParkNum1_Btn"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
-                        android:background="@drawable/slide_gangseo_style"
-                        android:gravity="left" />
+                        android:background="@drawable/slide_gangseo_style"/>
 
                     <Button
                         android:id="@+id/main_menu_goParkNum2_Btn"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
-                        android:background="@drawable/slide_kwangnaru_style"
-                        android:gravity="left" />
+                        android:background="@drawable/slide_kwangnaru_style" />
 
                     <Button
                         android:id="@+id/main_menu_goParkNum3_Btn"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
-                        android:gravity="left"
                         android:background="@drawable/slide_nanji_style" />
 
                     <Button
                         android:id="@+id/main_menu_goParkNum4_Btn"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
-                        android:background="@drawable/slide_ttukseom_style"
-                        android:gravity="left" />
+                        android:background="@drawable/slide_ttukseom_style"/>
 
                     <Button
                         android:id="@+id/main_menu_goParkNum5_Btn"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
-                        android:background="@drawable/slide_mangwon_style"
-                        android:gravity="left" />
+                        android:background="@drawable/slide_mangwon_style" />
 
                     <Button
                         android:id="@+id/main_menu_goParkNum6_Btn"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
-                        android:background="@drawable/slide_banpo_style"
-                        android:gravity="left" />
+                        android:background="@drawable/slide_banpo_style"/>
 
                     <Button
                         android:id="@+id/main_menu_goParkNum7_Btn"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
-                        android:background="@drawable/slide_yanghwa_style"
-                        android:gravity="left" />
+                        android:background="@drawable/slide_yanghwa_style" />
 
                     <Button
                         android:id="@+id/main_menu_goParkNum8_Btn"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
-                        android:background="@drawable/slide_yeouido_style"
-                        android:gravity="left" />
+                        android:background="@drawable/slide_yeouido_style"/>
 
                     <Button
                         android:id="@+id/main_menu_goParkNum9_Btn"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
-                        android:background="@drawable/slide_ichon_style"
-                        android:gravity="left" />
+                        android:background="@drawable/slide_ichon_style"/>
 
                     <Button
                         android:id="@+id/main_menu_goParkNum10_Btn"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
-                        android:background="@drawable/slide_jamsil_style"
-                        android:gravity="left" />
+                        android:background="@drawable/slide_jamsil_style"/>
 
                     <Button
                         android:id="@+id/main_menu_goParkNum11_Btn"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
-                        android:background="@drawable/slide_jamwon_style"
-                        android:gravity="left" />
+                        android:background="@drawable/slide_jamwon_style"/>
                 </LinearLayout>
             </LinearLayout>
         </ScrollView>
@@ -316,6 +303,7 @@
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:layout_alignParentBottom="true"
+        
         android:orientation="vertical" >
 
         <TextView
