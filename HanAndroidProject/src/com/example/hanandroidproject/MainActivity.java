@@ -3,6 +3,7 @@ package com.example.hanandroidproject;
 import java.util.ArrayList;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
@@ -37,6 +38,9 @@ public class MainActivity extends Activity {
 	ViewPager main_wheatherPager;
 	TextView main_loginCheck_tv;
 	Button main_closeMenu_Btn, main_signInOrMyPage_Btn, main_logout_Btn;
+
+
+	
 	ImageButton main_openMenu_Btn,  main_goParkNum1_iBtn, main_goParkNum2_iBtn,
 			main_goParkNum3_iBtn, main_goParkNum4_iBtn, main_goParkNum5_iBtn,
 			main_goParkNum6_iBtn, main_goParkNum7_iBtn, main_goParkNum8_iBtn,
@@ -151,8 +155,294 @@ public class MainActivity extends Activity {
 		
 		setNoticeList();
 		
+		Button goParkNum1_Btn=(Button)findViewById(R.id.main_menu_goParkNum1_Btn);	
+		Button goParkNum2_Btn=(Button)findViewById(R.id.main_menu_goParkNum2_Btn);	
+		Button goParkNum3_Btn=(Button)findViewById(R.id.main_menu_goParkNum3_Btn);	
+		Button goParkNum4_Btn=(Button)findViewById(R.id.main_menu_goParkNum4_Btn);	
+		Button goParkNum5_Btn=(Button)findViewById(R.id.main_menu_goParkNum5_Btn);	
+		Button goParkNum6_Btn=(Button)findViewById(R.id.main_menu_goParkNum6_Btn);	
+		Button goParkNum7_Btn=(Button)findViewById(R.id.main_menu_goParkNum7_Btn);	
+		Button goParkNum8_Btn=(Button)findViewById(R.id.main_menu_goParkNum8_Btn);	
+		Button goParkNum9_Btn=(Button)findViewById(R.id.main_menu_goParkNum9_Btn);	
+		Button goParkNum10_Btn=(Button)findViewById(R.id.main_menu_goParkNum10_Btn);
+		Button goParkNum11_Btn=(Button)findViewById(R.id.main_menu_goParkNum11_Btn);
 		
+		goParkBtnClick(goParkNum1_Btn);
+		goParkBtnClick(goParkNum2_Btn);
+		goParkBtnClick(goParkNum3_Btn);
+		goParkBtnClick(goParkNum4_Btn);
+		goParkBtnClick(goParkNum5_Btn);
+		goParkBtnClick(goParkNum6_Btn);
+		goParkBtnClick(goParkNum7_Btn);
+		goParkBtnClick(goParkNum8_Btn);
+		goParkBtnClick(goParkNum9_Btn);
+		goParkBtnClick(goParkNum10_Btn);
+		goParkBtnClick(goParkNum11_Btn);
+		
+		goParkBtnClick1(main_goParkNum1_iBtn);
+		goParkBtnClick1(main_goParkNum2_iBtn);
+		goParkBtnClick1(main_goParkNum3_iBtn);
+		goParkBtnClick1(main_goParkNum4_iBtn);
+		goParkBtnClick1(main_goParkNum5_iBtn);
+		goParkBtnClick1(main_goParkNum6_iBtn);
+		goParkBtnClick1(main_goParkNum7_iBtn);
+		goParkBtnClick1(main_goParkNum8_iBtn);
+		goParkBtnClick1(main_goParkNum9_iBtn);
+		goParkBtnClick1(main_goParkNum10_iBtn);
+		goParkBtnClick1(main_goParkNum11_iBtn);
 
+	}
+	
+	
+	private void goParkBtnClick1(ImageButton iBtn){
+		if(iBtn.getId()==R.id.main_goParkNum1_iBtn){
+		iBtn.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(getApplicationContext(),GangseoActivity.class);
+				startActivity(intent);
+			}
+		});
+		}
+		
+		if(iBtn.getId()==R.id.main_goParkNum2_iBtn){
+		iBtn.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				
+				Intent intent = new Intent(getApplicationContext(),KwangnaruActivity.class);
+				startActivity(intent);
+			}
+		});
+		}
+		
+		if(iBtn.getId()==R.id.main_goParkNum3_iBtn){
+		iBtn.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(getApplicationContext(),NanjiActivity.class);
+				startActivity(intent);
+			}
+		});
+		}
+		
+		if(iBtn.getId()==R.id.main_goParkNum4_iBtn){
+		iBtn.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(getApplicationContext(),TtukseomActivity.class);
+				startActivity(intent);
+			}
+		});
+		}
+		
+		if(iBtn.getId()==R.id.main_goParkNum5_iBtn){
+		iBtn.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(getApplicationContext(),MangwonActivity.class);
+				startActivity(intent);
+			}
+		});
+		}
+		
+		if(iBtn.getId()==R.id.main_goParkNum6_iBtn){
+		iBtn.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(getApplicationContext(),BanpoActivity.class);
+				startActivity(intent);
+			}
+		});
+		}
+		
+		if(iBtn.getId()==R.id.main_goParkNum7_iBtn){
+		iBtn.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(getApplicationContext(),YanghwaActivity.class);
+				startActivity(intent);
+			}
+		});
+		}
+		
+		if(iBtn.getId()==R.id.main_goParkNum8_iBtn){
+		iBtn.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(getApplicationContext(),YeouidoActivity.class);
+				startActivity(intent);
+			}
+		});
+		}
+		
+		if(iBtn.getId()==R.id.main_goParkNum9_iBtn){
+		iBtn.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(getApplicationContext(),IchonActivity.class);
+				startActivity(intent);
+			}
+		});
+		}
+		
+		if(iBtn.getId()==R.id.main_goParkNum10_iBtn){
+		iBtn.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(getApplicationContext(),JamsilActivity.class);
+				startActivity(intent);
+			}
+		});
+		}
+		
+		if(iBtn.getId()==R.id.main_goParkNum11_iBtn){
+		iBtn.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(getApplicationContext(),JamwonActivity.class);
+				startActivity(intent);
+			}
+		});
+		}
+		
+	}
+	
+	
+	private void goParkBtnClick(Button Btn){
+		if(Btn.getId()==R.id.main_menu_goParkNum1_Btn){
+		Btn.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(getApplicationContext(),GangseoActivity.class);
+				startActivity(intent);
+			}
+		});
+		}
+		
+		if(Btn.getId()==R.id.main_menu_goParkNum2_Btn){
+		Btn.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				Log.i("xxxxx", "222");
+				Intent intent = new Intent(getApplicationContext(),KwangnaruActivity.class);
+				startActivity(intent);
+			}
+		});
+		}
+		
+		if(Btn.getId()==R.id.main_menu_goParkNum3_Btn){
+		Btn.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(getApplicationContext(),NanjiActivity.class);
+				startActivity(intent);
+			}
+		});
+		}
+		
+		if(Btn.getId()==R.id.main_menu_goParkNum4_Btn){
+		Btn.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(getApplicationContext(),TtukseomActivity.class);
+				startActivity(intent);
+			}
+		});
+		}
+		
+		if(Btn.getId()==R.id.main_menu_goParkNum5_Btn){
+		Btn.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(getApplicationContext(),MangwonActivity.class);
+				startActivity(intent);
+			}
+		});
+		}
+		
+		if(Btn.getId()==R.id.main_menu_goParkNum6_Btn){
+		Btn.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(getApplicationContext(),BanpoActivity.class);
+				startActivity(intent);
+			}
+		});
+		}
+		
+		if(Btn.getId()==R.id.main_menu_goParkNum7_Btn){
+		Btn.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(getApplicationContext(),YanghwaActivity.class);
+				startActivity(intent);
+			}
+		});
+		}
+		
+		if(Btn.getId()==R.id.main_menu_goParkNum8_Btn){
+		Btn.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(getApplicationContext(),YeouidoActivity.class);
+				startActivity(intent);
+			}
+		});
+		}
+		
+		if(Btn.getId()==R.id.main_menu_goParkNum9_Btn){
+		Btn.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(getApplicationContext(),IchonActivity.class);
+				startActivity(intent);
+			}
+		});
+		}
+		
+		if(Btn.getId()==R.id.main_menu_goParkNum10_Btn){
+		Btn.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(getApplicationContext(),JamsilActivity.class);
+				startActivity(intent);
+			}
+		});
+		}
+		
+		if(Btn.getId()==R.id.main_menu_goParkNum11_Btn){
+		Btn.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(getApplicationContext(),JamwonActivity.class);
+				startActivity(intent);
+			}
+		});
+		}
+		
 	}
 	
 	private void setNoticeList(){
