@@ -13,8 +13,9 @@ public class Main_NoticeAsyncTask extends AsyncTask<String, String, ArrayList<Ma
 	@Override
 	protected ArrayList<Main_NoticeDTO> doInBackground(String... params) {
 		Main_NoticeParser parser = new Main_NoticeParser();
-		try {
-			URL url = new URL("http://192.168.0.40:8983/HanOracle/test/main_noticeSelect.jsp");
+		try {/*
+			URL url = new URL("http://192.168.0.40:8983/HanOracle/test/main_noticeSelect.jsp");*/
+			URL url = new URL("http://192.168.1.45:8338/HanOracle/test/main_noticeSelect.jsp");
 			parser.xmlParser(url);
 			
 			list = parser.getList();

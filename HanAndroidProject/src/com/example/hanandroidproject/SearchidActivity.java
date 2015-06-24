@@ -1,8 +1,6 @@
 package com.example.hanandroidproject;
 
-import java.io.BufferedReader;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -12,7 +10,6 @@ import org.apache.http.NameValuePair;
 import org.apache.http.client.utils.URLEncodedUtils;
 import org.apache.http.message.BasicNameValuePair;
 
-import requestxml.RequestXml_Member;
 import requestxml.getXML;
 import android.app.Activity;
 import android.content.Intent;

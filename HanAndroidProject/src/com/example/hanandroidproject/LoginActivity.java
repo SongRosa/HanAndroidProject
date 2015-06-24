@@ -1,14 +1,6 @@
 package com.example.hanandroidproject;
 
-import java.io.IOException;
 import java.io.InputStream;
-import java.net.MalformedURLException;
-import java.net.URL;
-
-import org.xmlpull.v1.XmlPullParser;
-import org.xmlpull.v1.XmlPullParserException;
-import org.xmlpull.v1.XmlPullParserFactory;
-
 import requestxml.RequestXml_Member;
 import requestxml.getXML;
 import android.app.Activity;
@@ -132,6 +124,8 @@ public class LoginActivity extends Activity {
 		if(pwdCheck == 1){
 			Log.i("yyy", "아이디와 비번이 일치함!!!!");
 			Intent it = new Intent(getApplicationContext(), MainActivity.class);
+			it.putExtra("ID", login_et_id.getText().toString());
+			it.putExtra("PWD", login_et_pwd.getText().toString());
 			startActivity(it);
 			finish();
 		}else if(pwdCheck == 0){

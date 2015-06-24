@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string name="login_btn_login">로그인</string>
+	<string name="login_btn_searchid">아이디찾기</string>
+	<string name="login_btn_searchpwd">패스워드찾기</string>
+	<string name="login_btn_join">회원가입</string>
+</resources>

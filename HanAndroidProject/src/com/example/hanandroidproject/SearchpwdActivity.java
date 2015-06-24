@@ -10,7 +10,6 @@ import org.apache.http.NameValuePair;
 import org.apache.http.client.utils.URLEncodedUtils;
 import org.apache.http.message.BasicNameValuePair;
 
-import requestxml.RequestXml_Member;
 import requestxml.getXML;
 import android.app.Activity;
 import android.content.Intent;
