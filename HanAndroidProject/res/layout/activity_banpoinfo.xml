@@ -31,32 +31,32 @@
                     android:id="@+id/infodeskBtn"
                     android:layout_width="72dp"
                     android:layout_height="50dp"
-                    android:background="@drawable/mapicons1" />
+                    android:background="@drawable/mapicons1_style"/>
 
                 <Button
                     android:id="@+id/bikeparkingBtn"
                     android:layout_width="72dp"
                     android:layout_height="50dp"
-                    android:background="@drawable/mapicons2" />
+                    android:background="@drawable/mapicons2_style" />
 
                 <Button
                     android:id="@+id/bikerentalBtn"
                     android:layout_width="72dp"
                     android:layout_height="50dp"
-                    android:background="@drawable/mapicons3" />
+                    android:background="@drawable/mapicons3_style" />
 
                 <Button
                     android:id="@+id/waterBtn"
                     android:layout_width="72dp"
                     android:layout_height="50dp"
-                    android:background="@drawable/mapicons4"
+                    android:background="@drawable/mapicons4_style"
                     />
 
                 <Button
                     android:id="@+id/policeBtn"
                     android:layout_width="72dp"
                     android:layout_height="50dp"
-                    android:background="@drawable/mapicons5"
+                    android:background="@drawable/mapicons5_style"
                     />
             </LinearLayout>
 
