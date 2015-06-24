@@ -8,10 +8,12 @@
 
     <TextView
         android:id="@+id/head"
-        android:layout_width="100dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="공원 안내지도" 
-        android:paddingTop="20dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:paddingTop="40dp"
         />
     
 <LinearLayout    
@@ -31,32 +33,32 @@
                     android:id="@+id/infodeskBtn"
                     android:layout_width="72dp"
                     android:layout_height="50dp"
-                    android:background="@drawable/mapicons1" />
+                    android:background="@drawable/mapicons1_style"/>
 
                 <Button
                     android:id="@+id/bikeparkingBtn"
                     android:layout_width="72dp"
                     android:layout_height="50dp"
-                    android:background="@drawable/mapicons2" />
+                    android:background="@drawable/mapicons2_style" />
 
                 <Button
                     android:id="@+id/bikerentalBtn"
                     android:layout_width="72dp"
                     android:layout_height="50dp"
-                    android:background="@drawable/mapicons3" />
+                    android:background="@drawable/mapicons3_style" />
 
                 <Button
                     android:id="@+id/waterBtn"
                     android:layout_width="72dp"
                     android:layout_height="50dp"
-                    android:background="@drawable/mapicons4"
+                    android:background="@drawable/mapicons4_style"
                     />
 
                 <Button
                     android:id="@+id/policeBtn"
                     android:layout_width="72dp"
                     android:layout_height="50dp"
-                    android:background="@drawable/mapicons5"
+                    android:background="@drawable/mapicons5_style"
                     />
             </LinearLayout>
 
