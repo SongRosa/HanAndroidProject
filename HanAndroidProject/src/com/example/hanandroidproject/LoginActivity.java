@@ -37,6 +37,9 @@ public class LoginActivity extends Activity {
 	int pwdCheck = 0;
 	int dbCheck = 0;
 	int goToLogin = 0;
+	
+	boolean checkLogin = false;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -123,9 +126,12 @@ public class LoginActivity extends Activity {
 		if(goToLogin == 1){
 		if(pwdCheck == 1){
 			Log.i("yyy", "아이디와 비번이 일치함!!!!");
+			checkLogin = true;
+			
 			Intent it = new Intent(getApplicationContext(), MainActivity.class);
 			it.putExtra("ID", login_et_id.getText().toString());
 			it.putExtra("PWD", login_et_pwd.getText().toString());
+			it.putExtra("checkLogin", checkLogin);
 			startActivity(it);
 			finish();
 		}else if(pwdCheck == 0){

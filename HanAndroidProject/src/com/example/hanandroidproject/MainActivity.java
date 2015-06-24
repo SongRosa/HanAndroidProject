@@ -2,6 +2,7 @@ package com.example.hanandroidproject;
 
 import java.util.ArrayList;
 
+import android.R.bool;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
@@ -31,7 +33,8 @@ import com.slidinglayer.SlidingLayer;
 import com.slidinglayer.SlidingLayer.OnInteractListener;
 
 public class MainActivity extends Activity {
-	
+
+	private BackPressCloseHandler backPressCloseHandler;
 	
 	RelativeLayout main_layout;
 	LinearLayout main_notice_layOut;
@@ -55,6 +58,7 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		backPressCloseHandler = new BackPressCloseHandler(this);
 		Log.d("onCreate",
 				"_onCreate_onCreate_onCreate_onCreate_onCreate_onCreate_onCreate");
 
@@ -72,8 +76,6 @@ public class MainActivity extends Activity {
 		main_notice_layOut = (LinearLayout)findViewById(R.id.main_notice_layOut);
 		
 		main_loginCheck_tv = (TextView)findViewById(R.id.main_loginCheck_tv);
-
-		
 		
 		main_openMenu_Btn = (ImageButton) findViewById(R.id.main_openMenu_Btn);
 		main_openMenu_Btn.setOnClickListener(new View.OnClickListener() {
@@ -151,7 +153,9 @@ public class MainActivity extends Activity {
 
 		setMainImageButton();
 		
-		checkLogin(false);
+		Intent intent = getIntent();
+		boolean checkLogin = intent.getBooleanExtra("checkLogin", false);
+		checkLogin(checkLogin);
 		
 		setNoticeList();
 		
@@ -481,6 +485,14 @@ public class MainActivity extends Activity {
 			
 		}else{
 			main_loginCheck_tv.setText("로그인 하세요");
+			main_loginCheck_tv.setOnClickListener(new OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					Intent it = new Intent(getApplicationContext(), LoginActivity.class);
+					startActivity(it);
+				}
+			});
 			main_signInOrMyPage_Btn.setText("회원가입");
 			main_logInOrlogOut_Btn.setText(" ");
 		}
@@ -532,6 +544,11 @@ public class MainActivity extends Activity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+	
+	@Override
+	public void onBackPressed(){
+		backPressCloseHandler.onBackPressed();
 	}
 
 }
