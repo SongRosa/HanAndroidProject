@@ -37,7 +37,7 @@ public class MainActivity extends Activity {
 	LinearLayout main_notice_layOut;
 	ViewPager main_wheatherPager;
 	TextView main_loginCheck_tv;
-	Button main_closeMenu_Btn, main_signInOrMyPage_Btn, main_logout_Btn;
+	Button main_closeMenu_Btn, main_signInOrMyPage_Btn, main_logInOrlogOut_Btn;
 
 
 	
@@ -106,7 +106,7 @@ public class MainActivity extends Activity {
 		});
 
 		main_signInOrMyPage_Btn = (Button)findViewById(R.id.main_signInOrMyPage_Btn);
-		main_logout_Btn = (Button)findViewById(R.id.main_logout_Btn);
+		main_logInOrlogOut_Btn = (Button)findViewById(R.id.main_logInOrlogOut_Btn);
 		
 		main_slidingMenu = (SlidingLayer) findViewById(R.id.main_slide_menu);
 		main_slidingMenu.setOnInteractListener(new OnInteractListener() {
@@ -476,13 +476,13 @@ public class MainActivity extends Activity {
 		if(b){
 			main_loginCheck_tv.setText("나들이");
 			main_signInOrMyPage_Btn.setText("마이페이지");
-			main_logout_Btn.setText("로그아웃");
+			main_logInOrlogOut_Btn.setText("로그아웃");
 			
 			
 		}else{
 			main_loginCheck_tv.setText("로그인 하세요");
 			main_signInOrMyPage_Btn.setText("회원가입");
-			main_logout_Btn.setText(" ");
+			main_logInOrlogOut_Btn.setText(" ");
 		}
 	}
 	private void setMainImageButton() {
