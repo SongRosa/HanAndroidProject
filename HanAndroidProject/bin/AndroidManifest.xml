@@ -7,10 +7,13 @@
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="19" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@drawable/appicon"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
@@ -23,7 +26,105 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity"></activity>
+        <activity
+            android:name=".GangseoActivity"
+            android:label="@string/title_activity_gangseo" >
+        </activity>
+        <activity
+            android:name=".GangseoInfoActivity"
+            android:label="@string/title_activity_gangseoinfo" >
+        </activity>
+        <activity
+            android:name=".BanpoActivity"
+            android:label="@string/title_activity_banpo" >
+        </activity>
+        <activity
+            android:name=".BanpoInfoActivity"
+            android:label="@string/title_activity_banpoinfo" >
+        </activity>
+        <activity
+            android:name=".YeouidoActivity"
+            android:label="@string/title_activity_yeouido" >
+        </activity>
+        <activity
+            android:name=".YeouidoInfoActivity"
+            android:label="@string/title_activity_yeouidoinfo" >
+        </activity>
+        <activity
+            android:name=".MangwonActivity"
+            android:label="@string/title_activity_mangwon" >
+        </activity>
+        <activity
+            android:name=".MangwonInfoActivity"
+            android:label="@string/title_activity_mangwoninfo" >
+        </activity>
+        <activity
+            android:name=".YanghwaActivity"
+            android:label="@string/title_activity_yanghwa" >
+        </activity>
+        <activity
+            android:name=".YanghwaInfoActivity"
+            android:label="@string/title_activity_yanghwainfo" >
+        </activity>
+        <activity
+            android:name=".IchonActivity"
+            android:label="@string/title_activity_ichon" >
+        </activity>
+        <activity
+            android:name=".IchonInfoActivity"
+            android:label="@string/title_activity_ichoninfo" >
+        </activity>
+        <activity
+            android:name=".JamsilActivity"
+            android:label="@string/title_activity_jamsil" >
+        </activity>
+        <activity
+            android:name=".JamsilInfoActivity"
+            android:label="@string/title_activity_jamsilinfo" >
+        </activity>
+        <activity
+            android:name=".KwangnaruActivity"
+            android:label="@string/title_activity_kwangnaru" >
+        </activity>
+        <activity
+            android:name=".KwangnaruInfoActivity"
+            android:label="@string/title_activity_kwangnaruinfo" >
+        </activity>
+        <activity
+            android:name=".JamwonActivity"
+            android:label="@string/title_activity_jamwon" >
+        </activity>
+        <activity
+            android:name=".JamwonInfoActivity"
+            android:label="@string/title_activity_jamwoninfo" >
+        </activity>
+        <activity
+            android:name=".NanjiActivity"
+            android:label="@string/title_activity_nanji" >
+        </activity>
+        <activity
+            android:name=".NanjiInfoActivity"
+            android:label="@string/title_activity_nanjiinfo" >
+        </activity>
+        <activity
+            android:name=".TtukseomActivity"
+            android:label="@string/title_activity_ttukseom" >
+        </activity>
+        <activity
+            android:name=".TtukseomInfoActivity"
+            android:label="@string/title_activity_ttukseominfo" >
+        </activity>
+        <activity
+            android:name=".AnotherActivity"
+            android:label="@string/title_another" >
+        </activity>
+        <activity android:name=".SearchidActivity"></activity>
+        <activity android:name=".SearchidConformActivity"></activity>
+        <activity android:name=".SearchpwdActivity"></activity>
+        <activity android:name=".JoinActivity"></activity>
         <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".SearchpwdChangeActivity"></activity>
+        <activity android:name=".MypageActivity"></activity>        
     </application>
 
 </manifest>
