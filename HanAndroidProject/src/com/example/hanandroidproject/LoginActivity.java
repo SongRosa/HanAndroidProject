@@ -113,7 +113,7 @@ public class LoginActivity extends Activity {
 				}
 			}).show();				
 		}else{			
-				requestURL = "http://192.168.0.40:8983/HanOracle/test/memberLogin.jsp?id="+login_et_id.getText().toString()+"&pwd="+login_et_pwd.getText().toString();
+				requestURL = "http://192.168.0.20:8089/HanOracle/test/memberLogin.jsp?id="+login_et_id.getText().toString()+"&pwd="+login_et_pwd.getText().toString();
 				
 				Log.i("xxx", requestURL);
 				bt = new BackgroundTask();
@@ -211,7 +211,7 @@ public class LoginActivity extends Activity {
 		InputStream is;
 		
 		protected Integer doInBackground(String ... value){
-			is = RequestXml_Member.requestGet_memberLogin(requestURL);
+			//is = RequestXml_Member.requestGet_memberLogin(requestURL);
 			
 			pwdCheck = getXML.getXml(is, requestURL);
 			

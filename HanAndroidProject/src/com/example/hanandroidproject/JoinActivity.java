@@ -256,7 +256,7 @@ public class JoinActivity extends Activity{
 		InputStream is;
 		protected ArrayList doInBackground(String ... value){
 
-			ArrayList result = new ArrayList();
+			ArrayList result;
 			
 			requestUrlList();
 			result = getXML.getXml_insert(is, requestURL);
@@ -265,6 +265,8 @@ public class JoinActivity extends Activity{
 		}
 		
 		protected void onPostExecute(ArrayList result){	
+			
+			Log.i("xxxx", result.size()+"");
 			
 			Log.i("xxxxx", result.get(0).toString());
 			Log.i("xxxxx", result.get(1).toString());
@@ -306,6 +308,6 @@ public class JoinActivity extends Activity{
 		dataList.add(new BasicNameValuePair("name", join_et_name.getText().toString()));
 		dataList.add(new BasicNameValuePair("email", join_et_email.getText().toString()));
 
-		requestURL = "http://192.168.0.40:8983/HanOracle/test/memberInsert.jsp?" + URLEncodedUtils.format(dataList, "utf-8");
+		requestURL = "http://192.168.0.20:8089/HanOracle/test/memberInsert.jsp?" + URLEncodedUtils.format(dataList, "utf-8");
 	}
 }

@@ -54,6 +54,8 @@ public class MainActivity extends Activity {
 	ListView main_noticeList;
 	Main_NoticeListAdapter noticeListAdapter;
 
+	boolean checkLogin;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -108,7 +110,26 @@ public class MainActivity extends Activity {
 		});
 
 		main_signInOrMyPage_Btn = (Button)findViewById(R.id.main_signInOrMyPage_Btn);
+		main_signInOrMyPage_Btn.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent it = new Intent(getApplicationContext(), JoinActivity.class);
+				startActivity(it);
+				finish();				
+			}
+		});
 		main_logInOrlogOut_Btn = (Button)findViewById(R.id.main_logInOrlogOut_Btn);
+		main_logInOrlogOut_Btn.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				if(checkLogin){
+					checkLogin = false;
+					checkLogin(checkLogin);
+				}
+			}
+		});
 		
 		main_slidingMenu = (SlidingLayer) findViewById(R.id.main_slide_menu);
 		main_slidingMenu.setOnInteractListener(new OnInteractListener() {
@@ -154,7 +175,7 @@ public class MainActivity extends Activity {
 		setMainImageButton();
 		
 		Intent intent = getIntent();
-		boolean checkLogin = intent.getBooleanExtra("checkLogin", false);
+		checkLogin = intent.getBooleanExtra("checkLogin", false);
 		checkLogin(checkLogin);
 		
 		setNoticeList();
