@@ -70,7 +70,7 @@ public class SearchpwdChangeActivity extends Activity {
 			}
 		}
 		
-		requestURL = "http://192.168.1.45:8338/HanOracle/test/memberUpdatePwd.jsp?id="+searchId+"&pwd="+searchpwdchange_et_pwd.getText().toString();
+		requestURL = "http://192.168.0.40:8983/HanOracle/test/memberUpdatePwd.jsp?id="+searchId+"&pwd="+searchpwdchange_et_pwd.getText().toString();
 		bt = new BackgroundTask();
 		bt.execute();
 	}

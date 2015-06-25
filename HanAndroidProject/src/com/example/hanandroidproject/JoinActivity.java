@@ -306,6 +306,6 @@ public class JoinActivity extends Activity{
 		dataList.add(new BasicNameValuePair("name", join_et_name.getText().toString()));
 		dataList.add(new BasicNameValuePair("email", join_et_email.getText().toString()));
 
-		requestURL = "http://192.168.1.45:8338/HanOracle/test/memberInsert.jsp?" + URLEncodedUtils.format(dataList, "utf-8");
+		requestURL = "http://192.168.0.40:8983/HanOracle/test/memberInsert.jsp?" + URLEncodedUtils.format(dataList, "utf-8");
 	}
 }

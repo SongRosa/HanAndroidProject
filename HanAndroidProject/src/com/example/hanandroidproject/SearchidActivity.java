@@ -122,7 +122,7 @@ public class SearchidActivity extends Activity {
 			dataList.add(new BasicNameValuePair("email", searchid_et_email.getText().toString()));
 			
 			
-			requestURL = "http://192.168.1.45:8338/HanOracle/test/searchMemberId.jsp?" + URLEncodedUtils.format(dataList, "utf-8");
+			requestURL = "http://192.168.0.40:8983/HanOracle/test/searchMemberId.jsp?" + URLEncodedUtils.format(dataList, "utf-8");
 			
 			result = getXML.getXml_search(is, requestURL);
 			Log.i("xxxx", "getXml ½ÇÇà");

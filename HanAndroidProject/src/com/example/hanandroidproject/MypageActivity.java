@@ -354,22 +354,22 @@ public class MypageActivity extends Activity{
 		if(check == 1){
 			dataList.add(new BasicNameValuePair("id",  memId));
 			dataList.add(new BasicNameValuePair("pwd", mypage_et_pwd.getText().toString()));
-			requestURL = "http://192.168.1.45:8338/HanOracle/test/memberUpdatePwd.jsp?" + URLEncodedUtils.format(dataList, "utf-8");
+			requestURL = "http://192.168.0.40:8983/HanOracle/test/memberUpdatePwd.jsp?" + URLEncodedUtils.format(dataList, "utf-8");
 		}else if(check == 2){
 			dataList.add(new BasicNameValuePair("id",  memId));
 			dataList.add(new BasicNameValuePair("nick", mypage_et_nick.getText().toString()));
-			requestURL = "http://192.168.1.45:8338/HanOracle/test/memberUpdateNick.jsp?" + URLEncodedUtils.format(dataList, "utf-8");
+			requestURL = "http://192.168.0.40:8983/HanOracle/test/memberUpdateNick.jsp?" + URLEncodedUtils.format(dataList, "utf-8");
 		}else if(check == 3){
 			dataList.add(new BasicNameValuePair("id",  memId));
 			dataList.add(new BasicNameValuePair("name", mypage_et_name.getText().toString()));
-			requestURL = "http://192.168.1.45:8338/HanOracle/test/memberUpdateName.jsp?" + URLEncodedUtils.format(dataList, "utf-8");
+			requestURL = "http://192.168.0.40:8983/HanOracle/test/memberUpdateName.jsp?" + URLEncodedUtils.format(dataList, "utf-8");
 		}else if(check == 4){
 			dataList.add(new BasicNameValuePair("id",  memId));
 			dataList.add(new BasicNameValuePair("email", mypage_et_email.getText().toString()));
-			requestURL = "http://192.168.1.45:8338/HanOracle/test/memberUpdateEmail.jsp?"+ URLEncodedUtils.format(dataList, "utf-8");
+			requestURL = "http://192.168.0.40:8983/HanOracle/test/memberUpdateEmail.jsp?"+ URLEncodedUtils.format(dataList, "utf-8");
 		}else if(check == 5){
 			dataList.add(new BasicNameValuePair("id",  memId));
-			requestURL = "http://192.168.1.45:8338/HanOracle/test/memberDelete.jsp?"+ URLEncodedUtils.format(dataList, "utf-8");
+			requestURL = "http://192.168.0.40:8983/HanOracle/test/memberDelete.jsp?"+ URLEncodedUtils.format(dataList, "utf-8");
 		}			
 	}
 }

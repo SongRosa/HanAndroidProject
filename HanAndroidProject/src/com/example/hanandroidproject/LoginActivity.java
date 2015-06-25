@@ -113,7 +113,7 @@ public class LoginActivity extends Activity {
 				}
 			}).show();				
 		}else{			
-				requestURL = "http://192.168.1.45:8338/HanOracle/test/memberLogin.jsp?id="+login_et_id.getText().toString()+"&pwd="+login_et_pwd.getText().toString();
+				requestURL = "http://192.168.0.40:8983/HanOracle/test/memberLogin.jsp?id="+login_et_id.getText().toString()+"&pwd="+login_et_pwd.getText().toString();
 				
 				Log.i("xxx", requestURL);
 				bt = new BackgroundTask();
